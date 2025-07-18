@@ -84,9 +84,9 @@ $(document).ready(function(){
         // Animate hamburger lines
         var $lines = $(this).find(".hamburger-line");
         if ($("#mobile-nav").hasClass("open")) {
-            $lines.eq(0).css('transform', 'rotate(45deg) translate(5px, 5px)');
+            $lines.eq(0).css('transform', 'rotate(45deg) translate(3px, 3px)');
             $lines.eq(1).css('opacity', '0');
-            $lines.eq(2).css('transform', 'rotate(-45deg) translate(7px, -6px)');
+            $lines.eq(2).css('transform', 'rotate(-45deg) translate(4px, -4px)');
         } else {
             $lines.css({
                 'transform': 'none',

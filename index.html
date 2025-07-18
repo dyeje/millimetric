@@ -15,21 +15,32 @@
     </head>
 
     <body>
-        <header>
+        <!-- Desktop Header -->
+        <header class="desktop-header">
             <a class="both" href="#intro" role="tab" id="intro-tab" data-toggle="tab" data-cible="#intro">
-                <img id="logo" src="https://www.millimetric.ca/img/mm_logo.jpg" alt="millimetric" width="10%" id="logo">
+                <img id="logo" src="https://www.millimetric.ca/img/mm_logo.jpg" alt="millimetric" width="10%">
             </a>
             <h1 id="header-title">Millimetric<span class="light-grey">instruments</span></h1>
-            <div class="line"></div>
         </header>
-        
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav-container">
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
             <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
+            <a class="both mobile-logo-container" href="#intro" role="tab" data-toggle="tab" data-cible="#intro">
+                <img id="mobile-logo" src="https://www.millimetric.ca/img/mm_logo.jpg" alt="millimetric">
+            </a>
+            <div class="mobile-title">
+                <div class="mobile-title-line">Millimetric</div>
+                <div class="mobile-title-line light-grey">instruments</div>
+            </div>
+        </header>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav-container">
             <nav class="mobile-nav" id="mobile-nav">
                 <a href="#intro" role="tab" data-toggle="tab" class="mobile-nav-item">Home</a>
                 <div class="mobile-nav-section">
@@ -48,6 +59,8 @@
                 <a href="#contacts" role="tab" data-toggle="tab" class="mobile-nav-item">Contact</a>
             </nav>
         </div>
+
+        <div class="line"></div>
         
         <!--Navbar + tabs-->
         <div class="container-fluid">
