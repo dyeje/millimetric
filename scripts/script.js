@@ -114,7 +114,7 @@ $(document).ready(function(){
     
     // Close mobile nav when clicking outside
     $(document).click(function(event) {
-        if (!$(event.target).closest('.mobile-nav-container').length) {
+        if (!$(event.target).closest('.mobile-header').length && !$(event.target).closest('#mobile-nav').length) {
             $("#mobile-nav").removeClass("open");
             var $lines = $("#mobile-nav-toggle").find(".hamburger-line");
             $lines.css({
