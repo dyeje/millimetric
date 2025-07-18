@@ -381,6 +381,13 @@ p {
         padding: 0 15px;
     }
     
+    /* Make product container flex for proper ordering - only for active tabs */
+    .tab-pane.active {
+        display: flex !important;
+        flex-direction: column;
+        height: auto !important;
+    }
+    
     /* Product page layout - stack columns vertically */
     .col-sm-1, .col-sm-5, .col-sm-6 {
         width: 100% !important;
@@ -389,9 +396,27 @@ p {
         padding-right: 15px;
     }
     
-    /* Hide thumbnail column on mobile */
+    /* Ensure thumbnail column appears after image on mobile */
+    .col-sm-1 {
+        order: 2;
+    }
+    
+    .col-sm-5 {
+        order: 1;
+    }
+    
+    .col-sm-6 {
+        order: 3;
+    }
+    
+    /* Show thumbnails below image on mobile */
     .thumb-line {
-        display: none;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 0;
+        text-align: center;
+        order: 2;
     }
     
     /* Make images full width and responsive */
@@ -420,8 +445,17 @@ p {
     
     /* Gallery adjustments */
     .thumbnail {
-        width: 30%;
-        margin: 1.5%;
+        width: 15%;
+        margin: 1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .nail {
+        width: 15%;
+        margin: 1%;
+        display: inline-block;
+        vertical-align: top;
     }
     
     /* Contact page adjustments */
@@ -430,6 +464,15 @@ p {
         float: none !important;
         padding-left: 15px;
         padding-right: 15px;
+    }
+    
+    /* Gallery page adjustments - remove excessive top padding */
+    .col-md-10 {
+        width: 100% !important;
+        float: none !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 10px !important;
     }
     
     /* Typography improvements */
